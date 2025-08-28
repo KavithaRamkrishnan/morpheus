@@ -1,7 +1,11 @@
+// next.config.ts
 import type { NextConfig } from "next";
+import path from "path";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const config: NextConfig = {
+  turbopack: {
+    root: path.join(__dirname), // <- force workspace root
+  },
 };
 
-export default nextConfig;
+export default config;
